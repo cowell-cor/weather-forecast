@@ -1,0 +1,61 @@
+
+<div *ngIf="data;else no_data">
+  <mat-table class="weathers-table" [dataSource]="data" 
+                matSort matSortActive="pres" matSortDirection="asc" matSortDisableClear>
+
+          <ng-container matColumnDef="temp">
+
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Temperature</mat-header-cell>
+
+              <mat-cell *matCellDef="let weather">{{weather.temp }}<span>{{'\u00B0'}}C</span></mat-cell>
+
+          </ng-container>
+
+          <ng-container matColumnDef="weather.description">
+
+              <mat-header-cell *matHeaderCellDef>Condition</mat-header-cell>
+
+              <mat-cell class="description-cell"
+                        *matCellDef="let weather">{{weather.weather.description}}</mat-cell>
+
+          </ng-container>
+
+          <ng-container matColumnDef="timezone">
+
+              <mat-header-cell *matHeaderCellDef>Timezone</mat-header-cell>
+
+              <mat-cell class="duration-cell"
+                        *matCellDef="let weather">{{weather.timezone}}</mat-cell>
+
+          </ng-container>
+          <ng-container matColumnDef="more">
+
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+
+              <mat-cell class="duration-cell"
+                        *matCellDef="let weather"><button mat-button class="mat-raised-button"
+                        (click)="viewDetails(weather)">
+                    View details
+                </button></mat-cell>
+
+          </ng-container>
+          <ng-container matColumnDef="search" >
+
+              <mat-header-cell *matHeaderCellDef></mat-header-cell>
+
+              <mat-cell class="duration-cell"
+                        *matCellDef="let weather"><button mat-button class="mat-raised-button"
+                        (click)="redirect()">
+                    Change city
+                </button></mat-cell>
+
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+          <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+</div>
+<ng-template #no_data >
+  <div class="nodata">No Data found</div>
+</ng-template>

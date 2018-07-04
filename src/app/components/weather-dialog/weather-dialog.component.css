@@ -1,0 +1,26 @@
+
+.mat-raised-button{
+    color:#fff;
+    background-color: #008a00;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    text-align :center;
+    padding: .8rem;
+}
+h2{
+    margin: 0;
+}
+h5{
+    margin-bottom: 1rem;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}

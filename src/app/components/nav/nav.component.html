@@ -1,0 +1,39 @@
+
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #start (click)="start.toggle()">
+      <mat-nav-list>
+
+        <a mat-list-item routerLink="/">
+            <mat-icon>dashboard</mat-icon>
+            <span class="text">Dashboard</span>
+        </a>
+
+        <a mat-list-item routerLink="search">
+            <mat-icon>search</mat-icon>
+            <span class="text">Search</span>
+        </a>
+        <a mat-list-item routerLink="about">
+            <mat-icon>wb_sunny</mat-icon>
+            <span class="text">About</span>
+        </a>
+        <a mat-list-item>
+            <mat-icon>help</mat-icon>
+            <span title="Coming Soon" class="text">Coming Soon</span>
+        </a>
+
+      </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+      <button mat-icon-button (click)="start.open('mouse')">
+          <mat-icon>menu</mat-icon>
+      </button>
+      <div class="title">
+          {{title}}
+      </div>       
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>

@@ -1,0 +1,38 @@
+.form {
+    min-width: 150px;
+    max-width: 350px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .city{
+    width: 40%;
+  }
+  .clear{
+    color: #fff;
+    background-color: #008a00;
+    border-color: #008a00;
+  }
+  @media(max-width: 1024px){
+    .container{
+      flex-direction: column;
+      align-items: center;
+    }
+    .mat-card>.mat-card-actions:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .mat-table {
+    width: 50%;
+    margin: 0 auto;
+}
+.mat-header-cell {
+  color: #008a00;
+}

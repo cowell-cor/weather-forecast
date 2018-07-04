@@ -1,0 +1,25 @@
+<section class="header">
+    <h2>Weather in {{city}}</h2> 
+    <h5>(at {{datetime}})</h5>
+</section>
+<table >
+    <tr>
+      <th >Temp</th>
+      <th >Pressure</th>
+      <th >Sunrise</th>
+      <th >Sunset</th>
+    </tr> 
+    <tr>
+      <td>{{temp}}{{'\u00B0'}}C</td>
+      <td>{{pres}}</td>
+      <td>{{sunrise}}</td>
+      <td>{{sunset}}</td>
+    </tr>
+</table>
+<section class="footer">
+  <button class="mat-raised-button" 
+    (click)="close()">
+      Close
+  </button>
+</section>
+  

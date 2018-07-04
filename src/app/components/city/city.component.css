@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.mat-header-cell {
+  text-align: center;
+  color: #008a00;
+  font-size: 1.5rem;
+}
+
+.mat-cell {
+  width: 50%;
+}

@@ -1,0 +1,8 @@
+.text{
+    margin-left: .5rem;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}

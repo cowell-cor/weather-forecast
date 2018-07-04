@@ -1,0 +1,28 @@
+
+.mat-header-cell {
+    color: #008a00;
+}
+.mat-raised-button{
+    background-color: #008a00;
+    border-color: #008a00;
+    color: #fff;
+}
+.mat-table{
+    width: 70%;
+    margin: 0 auto;
+}
+.nodata{
+    color: red;
+    display: flex;
+    justify-content: center;
+    margin : 1rem;
+}
+/* Making weather table responsive */
+@media(max-width:768px){
+    .mat-cell:first-child, mat-footer-cell:first-child, mat-header-cell:first-child{
+        padding: 0;
+    }
+    .mat-footer-row, .mat-header-row, .mat-row{
+        flex-direction: column;
+    }
+}
